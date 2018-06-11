@@ -5,4 +5,5 @@ from .models import Word
 
 @admin.register(Word)
 class WordAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('word', 'word_type', )
+    list_filter = ('word_type', )
